@@ -1,0 +1,40 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 54px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+
+.current-filter {
+  color: var(--white-text);
+  background-color: var(--accent-color);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.filter__btn {
+
+  @include font(16px, 500, 1.39)
+  color: var(--black-text);
+  background-color: var(--grey-back);
+  font-family: "roboto";
+  display: block;
+
+  border-radius: 4px;
+  padding: 6px 22px;
+
+  transition-property: background-color, box-shadow, color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+
+
+  &:hover,
+  &:focus {
+    color: var(--white-text);
+    background-color: var(--accent-color);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+}

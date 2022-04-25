@@ -1,0 +1,44 @@
+.team {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--grey-back);
+  line-height: 1;
+}
+
+.profession {
+  color: var(--grey-text);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+
+.stuff-desc {
+  padding: 30px 32px;
+}
+
+.employer-name {
+  margin-bottom: 10px;
+}
+
+.employer-name,
+.profession {
+  text-align: center;
+}
+
+.stuff-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.stuff-list {
+  display: flex;
+}
+
+.stuff-item {
+  background-color: #fff;
+  border-radius: 4px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
