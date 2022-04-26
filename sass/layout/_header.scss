@@ -55,6 +55,20 @@
   height: 100vh;
   overflow: auto;
 
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.mob-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mob-menu__container {
+  position: relative;
+  padding: 48px 40px;
 }
 
 .mob-menu__close-icon {
@@ -62,13 +76,35 @@
   height: 19px;
   position: absolute;
   top: 21px;
-  right: 25px;
+  right: -15px;
 }
 
-.mob-menu__container {
-  position: relative;
-  padding: 48px 40px;
+.mob-menu__nav {
+  @include font(40px, 500, 47);
+  color: var(--black-text);
 }
+
+
+// .mob-menu-current {
+//   color: var(--accent-color);
+// }
+
+// .mob-menu__nav-item {
+//   margin-bottom: 32px;
+// }
+
+// .mob-menu__contact-phone {
+//   @include font(34px, 500, 40);
+//   color: var(--accent-color);
+//   margin-bottom: 32px;
+// }
+
+// .mob-menu__contact-mail {
+//   @include font(24px, 500, 28);
+//   color: var(--grey-text);
+//   margin-bottom: 64px;
+// }
+
 
 
 // .header .logo {
