@@ -21,7 +21,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: #fff;
     border-radius: 3px;
     padding: 40px;
   }
@@ -48,7 +48,8 @@
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
 
-&:hover {
+&:hover,
+&focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
