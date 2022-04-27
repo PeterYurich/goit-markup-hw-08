@@ -381,7 +381,7 @@ img {
   width: 40px;
   height: 40px;
   line-height: 0;
-  background-color: none;
+  background-color: #fff;
 }
 .mob-menu-open-btn:hover, .mob-menu-open-btn:focus {
   color: var(--accent-color);
@@ -479,6 +479,7 @@ body .mob-menu.is-open {
   position: absolute;
   top: 21px;
   right: 21px;
+  background-color: #fff;
 }
 .mob-menu__close-btn:hover, .mob-menu__close-btn:focus {
   color: var(--accent-color);
