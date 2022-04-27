@@ -41,7 +41,7 @@
   color: var(--accent-color);
 }
 
-.client-link, .portfolio__overlay, .submit-btn, .form-input-icon, .form-input,
+.client-link, .portfolio__overlay, .contact__link, .submit-btn, .form-input-icon, .form-input,
 .comment, .social-link {
   transition-duration: var(--duration);
   transition-timing-function: var(--t-function);
@@ -393,12 +393,19 @@ img {
   }
 }
 
+.mob-header {
+  width: 100%;
+}
+
 @media screen and (max-width: 767px) {
   .nav,
 .contact-header {
     display: none;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
+    width: 0;
+    height: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -422,13 +429,18 @@ img {
   padding-bottom: 10px;
   position: relative;
 }
-
+@media screen and (min-width: 768px) {
+  .container_header {
+    padding: 0;
+  }
+}
 @media screen and (min-width: 480px) {
-  .container {
+  .container_header .container {
     width: 412px;
     margin: 0 auto;
   }
 }
+
 @media screen and (min-width: 768px) {
   .container {
     width: 708px;
@@ -548,6 +560,7 @@ body .mob-menu.is-open {
 .nav__link {
   display: block;
   height: 100%;
+  padding: 32px 0;
 }
 
 .nav__item {
@@ -560,6 +573,15 @@ body .mob-menu.is-open {
 .contact__link {
   display: flex;
   align-items: center;
+  transition-property: color;
+}
+@media screen and (min-width: 1200px) {
+  .contact__link {
+    padding: 32px 0;
+  }
+}
+.contact__link:hover, .contact__link:focus {
+  color: var(--accent-color);
 }
 
 .contact__item {
@@ -582,20 +604,10 @@ body .mob-menu.is-open {
 
 @media screen and (min-width: 1200px) {
   .contact-header__mail {
-    color: var(--accent-color);
     margin-right: 30px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .contact-header__phone {
-    margin-right: 0;
-  }
-
-  .container_header .logo {
-    margin-left: 0;
-  }
-}
 .current-page {
   color: var(--accent-color);
   position: relative;
@@ -609,11 +621,6 @@ body .mob-menu.is-open {
   background-color: var(--accent-color);
   border-radius: 2px;
   bottom: -2px;
-}
-
-.container_header {
-  display: flex;
-  align-items: center;
 }
 
 .header {
@@ -638,8 +645,8 @@ body .mob-menu.is-open {
 }
 
 .contact-link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
