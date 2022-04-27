@@ -1,12 +1,14 @@
 
 .logo {
     color: var(--accent-color);
-    font-weight: 700;
     font-family: "Raleway";
-    font-size: 26px;
     text-align: Left;
     letter-spacing: 0.03em;
-    line-height: 1.19;
+    @include font (24, 700, 28);
+
+    @media screen and (min-width:1200px) {
+      @include font (26, 700, 30);
+    }
   }
   
   .logo--black {

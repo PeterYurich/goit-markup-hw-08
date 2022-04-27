@@ -115,12 +115,19 @@ img {
 
 .logo {
   color: var(--accent-color);
-  font-weight: 700;
   font-family: "Raleway";
-  font-size: 26px;
   text-align: Left;
   letter-spacing: 0.03em;
-  line-height: 1.19;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: calc(28 / 24);
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: calc(30 / 26);
+  }
 }
 
 .logo--black {
@@ -374,17 +381,31 @@ img {
   width: 40px;
   height: 40px;
   line-height: 0;
+  background-color: none;
 }
 .mob-menu-open-btn:hover, .mob-menu-open-btn:focus {
   color: var(--accent-color);
 }
-
-.nav__list {
-  display: none;
+@media screen and (min-width: 768px) {
+  .mob-menu-open-btn {
+    display: none;
+    pointer-events: none;
+  }
 }
 
-.contact_header {
-  display: none;
+@media screen and (max-width: 767px) {
+  .nav,
+.contact-header {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav,
+.contact-header {
+    display: flex;
+  }
 }
 
 .container {
@@ -475,7 +496,7 @@ body .mob-menu.is-open {
 .mob-menu__nav {
   font-size: 40px;
   font-weight: 500;
-  line-height: 1.18;
+  line-height: calc(47 / 40);
   color: var(--black-text);
 }
 
@@ -486,7 +507,7 @@ body .mob-menu.is-open {
 .mob-menu__contact-phone {
   font-size: 34px;
   font-weight: 500;
-  line-height: 1.18;
+  line-height: calc(40 / 34);
   color: var(--accent-color);
   margin-bottom: 32px;
 }
@@ -494,7 +515,7 @@ body .mob-menu.is-open {
 .mob-menu__contact-mail {
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.17;
+  line-height: calc(28 / 24);
   color: var(--grey-text);
   margin-bottom: 64px;
 }
@@ -503,7 +524,7 @@ body .mob-menu.is-open {
   display: flex;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.22;
+  line-height: calc(22 / 18);
   color: var(--accent-color);
 }
 
@@ -513,6 +534,122 @@ body .mob-menu.is-open {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
+.header .logo {
+  padding: 24px 0;
+}
+
+.nav__list {
+  font-size: var(--size-heder);
+  line-height: var(--height-heder);
+  display: flex;
+}
+
+.nav__link {
+  display: block;
+  height: 100%;
+}
+
+.nav__item {
+  font-weight: 500;
+}
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+}
+
+.contact__item {
+  color: var(--grey-text);
+}
+@media screen and (min-width: 768px) {
+  .contact__item {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: calc(14 / 12);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__item {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: calc(17 / 14);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-header__mail {
+    color: var(--accent-color);
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-header__phone {
+    margin-right: 0;
+  }
+
+  .container_header .logo {
+    margin-left: 0;
+  }
+}
+.current-page {
+  color: var(--accent-color);
+  position: relative;
+}
+.current-page::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  bottom: -2px;
+}
+
+.container_header {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.contact__mail-icon,
+.contact__phone-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .contact__mail-icon,
+.contact__phone-icon {
+    margin-right: 8px;
+  }
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+}
+
+.contact-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contact-header {
+    display: block;
+  }
+
+  .contact-header__mail {
+    margin-bottom: 10px;
+  }
+}
 .order {
   background-color: var(--accent-color);
   color: var(--white-text);
@@ -696,9 +833,9 @@ body .mob-menu.is-open {
 .portfolio__title {
   color: var(--black-text);
   margin-bottom: 4px;
-  font-size: 18px;
+  font-size: 18pxpx;
   font-weight: 700;
-  line-height: 1.71;
+  line-height: calc(1.71 / 18px);
 }
 
 .portfolio__item {
@@ -725,9 +862,9 @@ body .mob-menu.is-open {
 }
 
 .portfolio__type {
-  font-size: 16px;
+  font-size: 16pxpx;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: calc(1.6 / 16px);
   color: var(--grey-text);
 }
 
