@@ -17,7 +17,7 @@
 
 .filter__btn {
 
-  @include font(16px, 500, 1.39)
+  @include font(16px, 500, 22);
   color: var(--black-text);
   background-color: var(--grey-back);
   font-family: "roboto";

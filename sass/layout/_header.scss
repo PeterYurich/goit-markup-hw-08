@@ -84,7 +84,7 @@
 }
 
 .mob-menu__nav {
-  @include font(40px, 500, 47);
+  // @include font(40px, 500, 47);
   color: var(--black-text);
 }
 
@@ -93,13 +93,13 @@
 }
 
 .mob-menu__contact-phone {
-  @include font(34px, 500, 40);
+  // @include font(34px, 500, 40);
   color: var(--accent-color);
   margin-bottom: 32px;
 }
 
 .mob-menu__contact-mail {
-  @include font(24px, 500, 28);
+  // @include font(24px, 500, 28);
   color: var(--grey-text);
   margin-bottom: 64px;
 }

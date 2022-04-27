@@ -41,7 +41,8 @@
 
 
 .portfolio__type {
-  @include font(16px, 400, 1.6) color: var(--grey-text);
+  @include font(16px, 400, 1.6);
+  color: var(--grey-text);
 }
 
 .portfolio__img-wrapper {
