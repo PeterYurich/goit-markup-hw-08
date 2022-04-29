@@ -22,7 +22,6 @@ body .mob-menu.is-open {
 }
 
 .mob-menu__container {
-    position: relative;
     padding: 48px 40px;
     // display: flex;
     // flex-direction: column;
@@ -66,17 +65,6 @@ body .mob-menu.is-open {
 
 // BOTTOM PART
 
-.mob-menu__contact-phone {
-    @include font(34, 500, 40);
-    color: var(--accent-color);
-    margin-bottom: 32px;
-}
-
-.mob-menu__contact-mail {
-    @include font(24, 500, 28);
-    color: var(--grey-text);
-    margin-bottom: 64px;
-}
 
 .mob-menu__socials {
     display: flex;
