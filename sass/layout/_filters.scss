@@ -1,13 +1,19 @@
 .filter {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   margin-bottom: 54px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width:767px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
 }
 
 .filter__item:not(:last-child) {
   margin-right: 8px;
 }
-
 
 .current-filter {
   color: var(--white-text);
@@ -16,7 +22,6 @@
 }
 
 .filter__btn {
-
   font-size: 16px;
   font-weight: 500;
   line-height: 1.14;
@@ -32,11 +37,17 @@
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 
-
   &:hover,
   &:focus {
     color: var(--white-text);
     background-color: var(--accent-color);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
   }
+}
+
+@media screen and (min-width:768px) {
+  .filter{
+    justify-content: center;
+  }
+
 }
