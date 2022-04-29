@@ -1,3 +1,11 @@
+.client-section {
+  @media screen and (max-width:1199px) {
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
 .activity {
   display: flex;
 }

@@ -289,6 +289,7 @@ img {
 
 .socials {
   display: flex;
+  justify-content: center;
 }
 
 .social-item:not(:last-child) {
@@ -707,6 +708,21 @@ body .mob-menu.is-open {
   line-height: 1;
 }
 
+.stuff-list {
+  display: block;
+}
+
+.stuff-item__img {
+  width: 100%;
+}
+
+.stuff-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 .profession {
   color: var(--grey-text);
   font-weight: 400;
@@ -726,22 +742,28 @@ body .mob-menu.is-open {
   text-align: center;
 }
 
-.stuff-item {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
+@media screen and (min-width: 768px) {
+  .stuff-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.stuff-list {
-  display: flex;
+  .stuff-item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .stuff-item:nth-child(2n-1) {
+    margin-right: 30px;
+  }
 }
-
-.stuff-item {
-  background-color: #fff;
-  border-radius: 4px;
+@media screen and (min-width: 1200px) {
+  .stuff-item {
+    margin-bottom: 0;
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .stuff-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.stuff-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .footer {
   background-color: var(--dark-back);
   padding: 60px 0;
@@ -903,8 +925,7 @@ body .mob-menu.is-open {
 }
 @media screen and (max-width: 767px) {
   .advantage {
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
   }
 }
 
@@ -929,6 +950,22 @@ body .mob-menu.is-open {
 @media screen and (min-width: 768px) {
   .advantages {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantage-item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .advantage-item .advantages {
+    display: flex;
+  }
+  .advantage-item:nth-child(2n-1) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages {
+    display: flex;
   }
 
   .advantage-item {
@@ -938,6 +975,14 @@ body .mob-menu.is-open {
     margin-right: 30px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .client-section {
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
 .activity {
   display: flex;
 }
