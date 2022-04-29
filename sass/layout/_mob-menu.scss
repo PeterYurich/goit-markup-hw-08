@@ -9,6 +9,8 @@
     opacity: 0;
     visibility: hidden;
     pointer-events:none;
+
+    z-index: 10;
 }
 
 .mob-menu.is-open {
@@ -23,9 +25,9 @@ body .mob-menu.is-open {
 
 .mob-menu__container {
     padding: 48px 40px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
     height: 100vh;
     width: 100vw;
@@ -46,9 +48,9 @@ body .mob-menu.is-open {
 
 // TOP PART
 
-.mob-menu__top-part {
-    margin-bottom: auto;
-}
+// .mob-menu__top-part {
+//     margin-bottom: auto;
+// }
 
 .mob-menu__nav-item {
     margin-bottom: 32px;

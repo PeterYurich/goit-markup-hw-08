@@ -328,8 +328,8 @@ img {
 }
 
 .modal {
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -370,6 +370,12 @@ img {
   fill: currentColor;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
 .form-title {
   color: #212121;
   font-size: 20px;
@@ -467,9 +473,9 @@ img {
 
 .agreement-text {
   color: #757575;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  line-height: calc(14 / 12);
   letter-spacing: 0.03em;
   margin-left: 4px;
 }
@@ -494,6 +500,13 @@ img {
   border-color: var(--accent-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .agreement-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(24 / 14);
+  }
+}
 .container_header {
   display: flex;
   justify-content: space-between;
@@ -596,6 +609,7 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 10;
 }
 
 .mob-menu.is-open {
@@ -610,6 +624,9 @@ body .mob-menu.is-open {
 
 .mob-menu__container {
   padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
   width: 100vw;
   overflow-y: auto;
@@ -623,10 +640,6 @@ body .mob-menu.is-open {
 }
 .mob-menu__close-btn:hover, .mob-menu__close-btn:focus {
   color: var(--accent-color);
-}
-
-.mob-menu__top-part {
-  margin-bottom: auto;
 }
 
 .mob-menu__nav-item {
@@ -902,7 +915,7 @@ body .mob-menu.is-open {
   margin-bottom: 4px;
   font-size: 18pxpx;
   font-weight: 700;
-  line-height: calc(1.71 / 18px);
+  line-height: calc(36 / 18px);
 }
 
 .portfolio__description {

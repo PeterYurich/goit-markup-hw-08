@@ -105,9 +105,7 @@
 
 .agreement-text {
   color: #757575;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(12, 400, 14);
   letter-spacing: 0.03em;
 
   margin-left: 4px;
@@ -136,5 +134,13 @@
 
   &:focus {
     border-color: var(--accent-color);
+  }
+}
+
+// 1200+
+
+@media screen and (min-width:1200px) {
+  .agreement-text {
+    @include font(14, 400, 24);
   }
 }
