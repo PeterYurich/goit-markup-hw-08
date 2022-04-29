@@ -68,6 +68,7 @@
 
   .stuff-item {
     margin-bottom: 0;
+    // по вычислениям получается 270px, хотя должно было поулчиться 260px:
     flex-basis: calc((100% - (3 * 30px)) / 4);
 
     &:not(:last-child) {
