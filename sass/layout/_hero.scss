@@ -53,7 +53,7 @@
   text-transform: uppercase;
   @include font(26, 900, 42);
 
-  // @media screen and (min-width:1200px) {
-  //   @include font(44, 900, 51);
-  // }
+  @media screen and (min-width:1200px) {
+    @include font(44, 900, 51);
+  }
 }

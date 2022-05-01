@@ -720,6 +720,13 @@ body .mob-menu.is-open {
   font-weight: 900;
   line-height: calc(42 / 26);
 }
+@media screen and (min-width: 1200px) {
+  .section-title_hero {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: calc(51 / 44);
+  }
+}
 
 .team {
   font-size: 16px;
@@ -802,6 +809,7 @@ body .mob-menu.is-open {
 
 .subscribe-wrapper {
   display: flex;
+  width: 100%;
 }
 @media screen and (max-width: 1199px) {
   .subscribe-wrapper {
@@ -859,6 +867,7 @@ body .mob-menu.is-open {
 
 .subscribe-input {
   background-color: var(--dark-back);
+  width: 95vw;
   max-width: 450px;
   height: 50px;
   border-radius: 4px;
