@@ -105,17 +105,18 @@ img {
 }
 
 .container {
-  width: 450px;
+  width: 100vw;
+  max-width: 480px;
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 708px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1160px;
+    max-width: 1200px;
   }
 }
 .section {
@@ -689,6 +690,11 @@ body .mob-menu.is-open {
   max-width: 1600px;
   margin: auto;
 }
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section .box {
+    background-image: url(../images/back-img@2x.jpg);
+  }
+}
 
 .order:hover,
 .order:focus {
@@ -852,7 +858,7 @@ body .mob-menu.is-open {
 
 .subscribe-input {
   background-color: var(--dark-back);
-  width: 450px;
+  max-width: 450px;
   height: 50px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -874,6 +880,10 @@ body .mob-menu.is-open {
 
   .footer-column:first-child {
     margin-right: 165px;
+  }
+
+  .subscribe-input {
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -971,13 +981,13 @@ body .mob-menu.is-open {
 }
 
 @media screen and (min-width: 768px) {
-  .portfolio__link {
+  .portfolio__item {
     flex-basis: calc((100% - 60px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
-  .portfolio__link {
-    flex-basis: calc((100% - 180px) / 3);
+  .portfolio__item {
+    flex-basis: calc((100% - 90px) / 3);
   }
 }
 .advantages {
@@ -1111,7 +1121,7 @@ body .mob-menu.is-open {
 .filter__btn {
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: calc(18 / 16);
   color: var(--black-text);
   background-color: var(--grey-back);
   font-family: "roboto";

@@ -22,9 +22,7 @@
 }
 
 .filter__btn {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.14;
+  @include font(16, 500, 18);
   color: var(--black-text);
   background-color: var(--grey-back);
   font-family: "roboto";

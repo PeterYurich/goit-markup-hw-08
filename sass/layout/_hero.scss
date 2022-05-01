@@ -21,7 +21,17 @@
   padding: 200px 0;
   max-width: 1600px;
   margin: auto;
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .box {
+    background-image: url(../images/back-img@2x.jpg);
+  }
 }
+}
+
+// @media (min)
 
 .order:hover,
 .order:focus {
