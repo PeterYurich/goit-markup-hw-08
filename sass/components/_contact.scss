@@ -1,4 +1,3 @@
-
 // CONTACT 767-
 
 .mob-menu__contact-phone {
@@ -17,7 +16,7 @@
 
     transition-property: color;
     @extend %transition-conduct;
-    
+
     &:hover,
     &:focus {
         color: var(--accent-color)
@@ -112,6 +111,17 @@
     margin-bottom: 9px;
 }
 
+// 1199-
+
+@media screen and (max-width:1199px) {
+
+    .contact-footer-list {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+}
+
 // 479-
 
 @media screen and (max-width:479px) {
@@ -119,5 +129,4 @@
     .mob-menu__contact-phone {
         font-size: 7vw;
     }
-
 }

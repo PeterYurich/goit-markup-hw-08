@@ -282,6 +282,13 @@ address {
   margin-bottom: 9px;
 }
 
+@media screen and (max-width: 1199px) {
+  .contact-footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 479px) {
   .mob-menu__contact-phone {
     font-size: 7vw;
@@ -721,7 +728,7 @@ body .mob-menu.is-open {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 769px) {
   .mob-menu {
     display: none;
   }
@@ -1116,10 +1123,6 @@ body .mob-menu.is-open {
   display: block;
 }
 
-.advantage-item {
-  display: block;
-}
-
 .advantage {
   display: block;
   margin-bottom: 10px;
@@ -1179,6 +1182,16 @@ body .mob-menu.is-open {
   }
   .advantage-item:not(:last-child) {
     margin-right: 30px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .advantage-item:not(:nth-child(n+2)) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advantage-item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 1199px) {

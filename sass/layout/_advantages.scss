@@ -2,10 +2,6 @@
   display: block;
 }
 
-.advantage-item {
-  display: block;
-}
-
 .advantage {
   display: block;
   margin-bottom: 10px;
@@ -76,4 +72,21 @@
   }
 }
 
+}
+
+// 1199-
+
+@media screen and (max-width:1199px) {
+  .advantage-item:not(:nth-child(n+2)) {
+    margin-bottom: 30px;
+  }
+}
+
+
+// 767-
+
+@media screen and (max-width:767px) {
+  .advantage-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
