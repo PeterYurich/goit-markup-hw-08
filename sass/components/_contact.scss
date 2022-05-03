@@ -64,20 +64,24 @@
 
 }
 
-.contact-header__mail {
-    @media screen and (min-width:1200px) {
-        margin-right: 30px;
-    }
-}
-
-
 @media screen and (min-width:768px) and (max-width:1200px) {
     .contact-header {
         display: block;
     }
 
     .contact-header__mail {
+        padding-top: 20px;
         margin-bottom: 10px;
+    }
+
+    .contact-header__phone {
+        padding-bottom: 20px;
+    }
+}
+
+.contact__item_mail {
+    @media screen and (min-width:1200px) {
+        margin-right: 30px;
     }
 }
 
