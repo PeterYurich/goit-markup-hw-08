@@ -1,3 +1,4 @@
+
 // CONTACT 767-
 
 .mob-menu__contact-phone {
@@ -12,11 +13,25 @@
     margin-bottom: 64px;
 }
 
+.mob-menu__contact-link {
+
+    transition-property: color;
+    @extend %transition-conduct;
+    
+    &:hover,
+    &:focus {
+        color: var(--accent-color)
+    }
+}
+
 // CONTACTS 768+
 
 .contact__link {
     display: flex;
     align-items: center;
+
+    transition-property: color;
+    @extend %transition-conduct;
 
     @media screen and (min-width:1200px) {
         padding: 32px 0;
@@ -95,4 +110,14 @@
 
 .mail-footer {
     margin-bottom: 9px;
+}
+
+// 479-
+
+@media screen and (max-width:479px) {
+
+    .mob-menu__contact-phone {
+        font-size: 7vw;
+    }
+
 }
