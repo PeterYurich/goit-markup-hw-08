@@ -35,7 +35,6 @@
   color: var(--white-text);
   font-style: inherit;
 
-  margin-top: 20px;
   margin-bottom: 9px;
 }
 
@@ -115,10 +114,12 @@
 
   .subscribe-input {
     width: 358px;
+    margin-bottom: 0;
   }
 
   .footer-column {
 align-items: flex-start;
+margin-bottom: 0;
 
     &:not(:last-child) {
       margin-right: auto;
@@ -129,4 +130,8 @@ align-items: flex-start;
     margin-right: 12px;
   }
 
+}
+
+.footer .logo {
+  margin-bottom: 20px;
 }

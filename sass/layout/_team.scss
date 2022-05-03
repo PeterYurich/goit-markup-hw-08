@@ -37,6 +37,7 @@
 
 .employer-name {
   margin-bottom: 10px;
+  @include font(16, 500, 19)
 }
 
 .employer-name,

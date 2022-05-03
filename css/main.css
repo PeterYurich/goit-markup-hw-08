@@ -98,6 +98,10 @@ img {
   height: auto;
 }
 
+address {
+  font-style: normal;
+}
+
 .container {
   width: 1200px;
   padding: 0 15px;
@@ -255,7 +259,7 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .contact__item_mail {
+  .contact__item:first-child {
     margin-right: 30px;
   }
 }
@@ -556,6 +560,11 @@ img {
 
 .header .logo {
   padding: 24px 0;
+  margin-right: 93px;
+}
+
+.contact-header {
+  margin-left: auto;
 }
 
 .mob-menu-open-btn {
@@ -772,6 +781,9 @@ body .mob-menu.is-open {
 
 .employer-name {
   margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(19 / 16);
 }
 
 .employer-name,
@@ -838,7 +850,6 @@ body .mob-menu.is-open {
   font-weight: 400;
   color: var(--white-text);
   font-style: inherit;
-  margin-top: 20px;
   margin-bottom: 9px;
 }
 
@@ -909,10 +920,12 @@ body .mob-menu.is-open {
 
   .subscribe-input {
     width: 358px;
+    margin-bottom: 0;
   }
 
   .footer-column {
     align-items: flex-start;
+    margin-bottom: 0;
   }
   .footer-column:not(:last-child) {
     margin-right: auto;
@@ -922,6 +935,10 @@ body .mob-menu.is-open {
     margin-right: 12px;
   }
 }
+.footer .logo {
+  margin-bottom: 20px;
+}
+
 .portfolio {
   display: flex;
   flex-wrap: wrap;
