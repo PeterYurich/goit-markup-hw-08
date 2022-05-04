@@ -85,7 +85,10 @@
 
     .contact-header__mail {
         padding-top: 20px;
-        margin-bottom: 10px;
+    }
+    
+    .contact__item:first-child {
+            margin-bottom: 10px;
     }
 
     .contact-header__phone {
