@@ -923,10 +923,6 @@ body .mob-menu.is-open {
   align-items: center;
 }
 
-.footer-column:last-child {
-  margin-top: 60px;
-}
-
 .subscribe-wrapper {
   display: flex;
   width: 100%;
@@ -995,6 +991,11 @@ body .mob-menu.is-open {
   color: var(--white-text);
 }
 
+@media screen and (max-width: 767px) {
+  .footer-column:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-container {
     display: flex;
@@ -1009,6 +1010,10 @@ body .mob-menu.is-open {
 
   .subscribe-input {
     width: 450px;
+  }
+
+  .footer-column:last-child {
+    margin-top: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
